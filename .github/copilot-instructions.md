@@ -1,0 +1,11 @@
+# Quy tắc bắt buộc
+- Dự án: React Native CLI (KHÔNG phải Expo) + Firebase Realtime Database. 
+- Chỉ làm đúng những gì có trong docs/REQUIREMENTS.md. Không thêm tính năng ngoài yêu cầu. Không refactor file không liên quan.
+- KHÔNG BỊA: tên package, tên hàm API, đường dẫn dữ liệu, version. Nếu không chắc hoặc thiếu thông tin thì DỪNG và hỏi tôi, kèm 2-3 phương án và ưu nhược điểm. Chưa được trả lời thì không code phần đó.
+- Trước khi sửa code: đọc các file liên quan và nói rõ những gì đã thấy (đang dùng SDK Firebase nào, cấu trúc dữ liệu hiện tại ra sao).
+- Muốn cài package mới: nói tên + lý do, chờ tôi đồng ý.
+- Toàn bộ code Firebase/Cloudinary nằm trong src/services/. Component/screen không gọi Firebase trực tiếp.
+- Mọi listener phải có hàm hủy và được gọi trong cleanup của useEffect.
+- Ghi nhiều node liên quan thì dùng MỘT lệnh update() multi-path. Tăng số đếm bằng increment(1), không đọc giá trị cũ rồi cộng.
+- Không để secret của Cloudinary trong code, chỉ dùng cloud name + unsigned upload preset lấy từ file config.
+- Cuối mỗi câu trả lời, liệt kê: (1) file đã tạo/sửa, (2) phần tôi phải tự làm (cấu hình console, native, quyền), (3) cách test, (4) điểm chưa chắc chắn.
